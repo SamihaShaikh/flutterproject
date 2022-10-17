@@ -4,16 +4,12 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:timekeepers/views/dashboard/loginpage.dart';
 import 'package:timekeepers/views/dashboard/signuppage.dart';
 
-class Homepage extends StatefulWidget {
+class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
 
   @override
-  State<Homepage> createState() => _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> {
-  @override
   Widget build(BuildContext context) {
+    print("homepage");
     return Scaffold(
           // appBar: AppBar(
           //   backgroundColor: Colors.amber,

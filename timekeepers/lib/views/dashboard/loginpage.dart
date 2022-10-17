@@ -6,20 +6,15 @@ import 'package:timekeepers/views/dashboard/categorypage.dart';
 import 'package:timekeepers/views/dashboard/prductgridpage.dart';
 import 'package:timekeepers/views/dashboard/signuppage.dart';
 
-class Loginpage extends StatefulWidget {
+class Loginpage extends StatelessWidget {
   const Loginpage({Key? key}) : super(key: key);
 
   @override
-  State<Loginpage> createState() => _LoginpageState();
-}
-
-class _LoginpageState extends State<Loginpage> {
-  @override
   Widget build(BuildContext context) {
+    print("Login");
     return Scaffold(
-     
-resizeToAvoidBottomInset: false,
-        backgroundColor:  Color.fromARGB(255, 152, 134, 79),
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Color.fromARGB(255, 152, 134, 79),
         // appBar: AppBar(
         //   elevation: 0,
         //   backgroundColor: Colors.amber,
@@ -44,7 +39,7 @@ resizeToAvoidBottomInset: false,
                 const Text(
                   "Login",
                   style: TextStyle(
-                      color:   Colors.amber,
+                      color: Colors.amber,
                       fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
@@ -70,13 +65,13 @@ resizeToAvoidBottomInset: false,
                           decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.email,
-                                color:   Colors.amber,
+                                color: Colors.amber,
                               ),
                               hintText: 'Email',
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(50),
-                                  borderSide: new BorderSide(
-                                      color:   Colors.amber))),
+                                  borderSide:
+                                      new BorderSide(color: Colors.amber))),
                         ),
                       ),
                       const SizedBox(
@@ -90,7 +85,7 @@ resizeToAvoidBottomInset: false,
                           decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.lock,
-                                color:  Colors.amber,
+                                color: Colors.amber,
                               ),
                               hintText: 'Password',
                               border: OutlineInputBorder(
@@ -115,9 +110,11 @@ resizeToAvoidBottomInset: false,
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Productgridpage()));
+                                // builder: (context) => Productgridpage()));
+
+                                builder: (context) => CategoryPage()));
                       },
-                      color:  Colors.amber,
+                      color: Colors.amber,
                       shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(50),
@@ -144,7 +141,7 @@ resizeToAvoidBottomInset: false,
                       child: const Text(
                         " Sign up",
                         style: TextStyle(
-                          color:  Colors.amber,
+                          color: Colors.amber,
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
                         ),
@@ -182,14 +179,12 @@ Widget inputFile({label, obscureText = false}) {
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey),
             ),
-            border:
-                OutlineInputBorder(borderSide: BorderSide(color:Colors.amber))),
+            border: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.amber))),
       ),
       SizedBox(
         height: 10,
       )
     ],
-  
-    );
-
+  );
 }

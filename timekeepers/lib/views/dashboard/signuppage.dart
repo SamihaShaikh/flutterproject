@@ -4,16 +4,12 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:timekeepers/views/dashboard/loginpage.dart';
 
-class Signuppage extends StatefulWidget {
+class Signuppage extends StatelessWidget {
   const Signuppage({Key? key}) : super(key: key);
 
   @override
-  State<Signuppage> createState() => _SignuppageState();
-}
-
-class _SignuppageState extends State<Signuppage> {
-  @override
   Widget build(BuildContext context) {
+    print("Sign Up page");
     return Scaffold(
 resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
