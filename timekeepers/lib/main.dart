@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:timekeepers/views/dashboard/categorypage.dart';
 import 'package:timekeepers/views/dashboard/homepage.dart';
+import 'package:timekeepers/views/dashboard/productdetail_page.dart';
 import 'package:timekeepers/views/dashboard/splashpage.dart';
 
 void main() {
@@ -17,10 +19,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.amber).copyWith(secondary: Colors.black),
         
         primarySwatch: Colors.blue,
       ),
-      home: Splashpage(),
+       home: Splashpage(),
+       routes: {
+        CategoryPage.routeName:(ctx)=>CategoryPage(),
+       },
+      // home: Productdetail_page(),
     );
   }
 }

@@ -4,9 +4,8 @@ import 'package:timekeepers/views/dashboard/prductgridpage.dart';
 import 'package:timekeepers/controllers/productcontroller.dart';
 
 class Menwatchpage extends StatelessWidget {
-   Menwatchpage({super.key});
+  Menwatchpage({super.key});
   final prdcontroller = Get.put(productcontroller());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +18,10 @@ class Menwatchpage extends StatelessWidget {
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 5),
             itemCount: prdcontroller.products.length,
-            itemBuilder: (ctx, i) => Productgridpage()
-            // return Card(
-            //   color: Colors.amber,
-            //   child: Center(child: Text('Men product data')),
-            // );
-            ));
+            itemBuilder: (ctx, i) => Productgridpage(
+              
+                img_url: '${prdcontroller.products[i].img_url!}',
+                product_name: '${prdcontroller.products[i].product_name!}',
+                id: '${prdcontroller.products[i].product_id!}')));
   }
 }

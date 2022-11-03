@@ -18,10 +18,10 @@ class productcontroller extends GetxController{
 void fetchproducts() async{
   await Future.delayed(Duration(seconds: 1));
   var prdresult=[
-  product(product_id : 1, product_name : 'trtr', product_details :'fdgdfhfghgh',product_price: 25000 ,product_brand:'Boat'),
-  product(product_id : 2, product_name : 'hhjhj', product_details :'fdgdfhfghgh',product_price: 25000 ,product_brand:'Fossil'),
-  product(product_id : 3, product_name : 'jyjyjyj', product_details :'fdgdfhfghgh',product_price: 25000 ,product_brand:'Boat'),
-  product(product_id : 4, product_name : 'jyjyjyj', product_details :'fdgdfhfghgh',product_price: 25000 ,product_brand:'Boat'),
+  product(product_id : 1, product_name : 'boat', product_details :'smart watch',product_price: 25000 ,product_brand:'Boat',img_url:'images/Students1.png'),
+  product(product_id : 2, product_name : 'fossil', product_details :'smart features',product_price: 25000 ,product_brand:'Fossil',img_url:'images/tklogo.png'),
+  product(product_id : 3, product_name : 'boat', product_details :'smart features',product_price: 25000 ,product_brand:'Boat',img_url:'images/tklogo.png'),
+  product(product_id : 4, product_name : 'rado', product_details :'smart features',product_price: 25000 ,product_brand:'Boat',img_url:'images/Students1.png'),
 
   ];
   products.value=prdresult;

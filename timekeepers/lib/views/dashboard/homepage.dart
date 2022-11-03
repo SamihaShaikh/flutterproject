@@ -11,11 +11,11 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     print("homepage");
     return Scaffold(
-          // appBar: AppBar(
-          //   backgroundColor: Colors.amber,
-          //       title: Image.asset('assets/images/tklogo.png' ,height: 60,width: 60,),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.amber,
+      //       title: Image.asset('assets/images/tklogo.png' ,height: 60,width: 60,),
 
-          // ),
+      // ),
       resizeToAvoidBottomInset: true,
       backgroundColor: Color(0xff80764E),
       body: SafeArea(
@@ -49,9 +49,9 @@ class Homepage extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => const Loginpage()));
                     },
-                    color:  Colors.amber,
+                    color: Colors.amber,
                     shape: RoundedRectangleBorder(
-                        side: const BorderSide(color:  Colors.amber),
+                        side: const BorderSide(color: Colors.amber),
                         borderRadius: BorderRadius.circular(50)),
                     child: const Text(
                       "Login",
@@ -72,7 +72,7 @@ class Homepage extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => Signuppage()));
                     },
-                    color:  Colors.amber,
+                    color: Colors.amber,
                     shape: RoundedRectangleBorder(
                         side: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(50)),

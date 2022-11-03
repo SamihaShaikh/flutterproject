@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:timekeepers/views/dashboard/homepage.dart';
 
 class Splashpage extends StatefulWidget {
@@ -12,7 +10,6 @@ class Splashpage extends StatefulWidget {
 
 class _SplashpageState extends State<Splashpage> {
   @override
-
   void initState() {
     super.initState();
     _navigatetohome();
@@ -26,7 +23,7 @@ class _SplashpageState extends State<Splashpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-              resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: true,
         backgroundColor: Colors.amber,
         body: Container(
             width: double.infinity,
@@ -44,10 +41,8 @@ class _SplashpageState extends State<Splashpage> {
                     height: MediaQuery.of(context).size.height / 2.5,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/tkgif.gif"))),
+                            image: AssetImage("assets/images/tkgif.gif"))),
                   ),
-                ]))
-    );
+                ])));
   }
 }

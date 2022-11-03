@@ -10,6 +10,8 @@ class CategoryPage extends StatelessWidget {
   // const Categorypage({Key? key}) : super(key: key);
   final catcontroller = Get.put(categorycontroller());
 
+  static const routeName = '/CategoryPage';
+
   @override
   Widget build(BuildContext context) {
     print("Categorypage");
@@ -27,33 +29,29 @@ class CategoryPage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () {
-
                           print('${controller.categories[index].cat_id}');
-                          var cid= controller.categories[index].cat_id;
+                          var cid = controller.categories[index].cat_id;
 
-                          if(cid==1)
-                          {
+                          if (cid == 1) {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      Menwatchpage()));
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Menwatchpage()));
                           }
-                          if(cid==2)
-                          {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      Womenwatchpage()));
-                          }
-                          if(cid==3)
-                          {
+                          if (cid == 2) {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      Kidswatchpage()));
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Womenwatchpage()));
+                          }
+                          if (cid == 3) {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        Kidswatchpage()));
                           }
                         },
                         child: Card(

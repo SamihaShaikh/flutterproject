@@ -8,7 +8,8 @@ class product{
   final int? product_price;
   final String? product_brand;
   final String? modelcolor;
-  product( {this.product_price,this.product_id,this.product_name,this.product_details,this.product_brand,this.modelcolor});
+  final String? img_url;
+  product( {this.product_price,this.product_id,this.product_name,this.product_details,this.product_brand,this.modelcolor,this.img_url});
 
   final isFovourite=false.obs;
 

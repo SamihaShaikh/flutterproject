@@ -1,9 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:timekeepers/views/dashboard/categorypage.dart';
-import 'package:timekeepers/views/dashboard/prductgridpage.dart';
 import 'package:timekeepers/views/dashboard/signuppage.dart';
 
 class Loginpage extends StatelessWidget {
@@ -15,21 +11,6 @@ class Loginpage extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Color.fromARGB(255, 152, 134, 79),
-        // appBar: AppBar(
-        //   elevation: 0,
-        //   backgroundColor: Colors.amber,
-        //         title: Image.asset('assets/images/tklogo.png' ,height: 60,width: 60,),
-        //   leading: IconButton(
-        //     onPressed: () {
-        //       Navigator.pop(context);
-        //     },
-        //     icon: const Icon(
-        //       Icons.arrow_back_ios,
-        //       size: 20,
-        //       color:   Color.fromARGB(255, 152, 134, 79),
-        //     ),
-        //   ),
-        // ),
         body: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 100),
             height: MediaQuery.of(context).size.height - 50,
@@ -114,7 +95,8 @@ class Loginpage extends StatelessWidget {
 
                                 builder: (context) => CategoryPage()));
                       },
-                      color: Colors.amber,
+                      // color: Colors.amber,
+                      color: Theme.of(context).colorScheme.primary,
                       shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(50),

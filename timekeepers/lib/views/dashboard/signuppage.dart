@@ -11,24 +11,8 @@ class Signuppage extends StatelessWidget {
   Widget build(BuildContext context) {
     print("Sign Up page");
     return Scaffold(
-resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   elevation: 0,
-      //    backgroundColor: Colors.amber,
-      //           title: Image.asset('assets/images/tklogo.png' ,height: 60,width: 60,),
-      //   leading: IconButton(
-      //     onPressed: () {
-      //       Navigator.pop(context);
-      //     },
-      //     icon: const Icon(
-      //       Icons.arrow_back_ios,
-      //       size: 20,
-      //       color: Colors.amber,
-      //     ),
-      //   ),
-      //   systemOverlayStyle: SystemUiOverlayStyle.dark,
-      // ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -42,7 +26,7 @@ resizeToAvoidBottomInset: false,
                   Text(
                     "Sign up",
                     style: TextStyle(
-                      color:  Colors.amber,
+                      color: Colors.amber,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
@@ -78,7 +62,7 @@ resizeToAvoidBottomInset: false,
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.person,
-                              color:  Colors.amber,
+                              color: Colors.amber,
                             ),
                             hintText: 'Name',
                             border: OutlineInputBorder(
@@ -97,16 +81,16 @@ resizeToAvoidBottomInset: false,
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.email,
-                              color:  Colors.amber,
+                              color: Colors.amber,
                             ),
                             hintText: 'Email',
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
                                 borderSide:
-                                    new BorderSide(color:  Colors.amber))),
+                                    new BorderSide(color: Colors.amber))),
                       ),
                     ),
-                    
+
                     const SizedBox(
                       height: 10,
                     ),
@@ -118,13 +102,13 @@ resizeToAvoidBottomInset: false,
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.phone_android,
-                              color:  Colors.amber,
+                              color: Colors.amber,
                             ),
                             hintText: 'Mobile',
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
                                 borderSide:
-                                    new BorderSide(color:  Colors.amber))),
+                                    new BorderSide(color: Colors.amber))),
                       ),
                     ),
                     const SizedBox(
@@ -138,13 +122,13 @@ resizeToAvoidBottomInset: false,
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.lock,
-                              color:  Colors.amber,
+                              color: Colors.amber,
                             ),
                             hintText: 'Password',
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
                                 borderSide:
-                                    new BorderSide(color:  Colors.amber))),
+                                    new BorderSide(color: Colors.amber))),
                       ),
                     ),
                     const SizedBox(
@@ -158,13 +142,13 @@ resizeToAvoidBottomInset: false,
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.lock,
-                              color:  Colors.amber,
+                              color: Colors.amber,
                             ),
                             hintText: 'Confirm Password',
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
                                 borderSide:
-                                    new BorderSide(color:   Colors.amber))),
+                                    new BorderSide(color: Colors.amber))),
                       ),
                     ),
                     const SizedBox(
@@ -216,7 +200,7 @@ resizeToAvoidBottomInset: false,
                     child: Text(
                       " Login",
                       style: TextStyle(
-                          color:  Colors.amber,
+                          color: Colors.amber,
                           fontWeight: FontWeight.w600,
                           fontSize: 18),
                     ),
