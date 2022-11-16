@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:timekeepers/views/dashboard/categorypage.dart';
+import 'package:timekeepers/views/addtocart/cart_page.dart';
+import 'package:timekeepers/views/category/categorypage.dart';
+import 'package:timekeepers/views/drawer/drawerpage.dart';
 import 'package:timekeepers/views/dashboard/homepage.dart';
-import 'package:timekeepers/views/dashboard/productdetail_page.dart';
+import 'package:timekeepers/views/product/productdetail_page.dart';
 import 'package:timekeepers/views/dashboard/splashpage.dart';
+import 'package:timekeepers/views/wishlist/wishlistpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,11 +26,13 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-       home: Splashpage(),
+      //  home: WishlistPage(),
+      // home:drawerpage(),
+      // home:CartPage(),
        routes: {
         CategoryPage.routeName:(ctx)=>CategoryPage(),
        },
-      // home: Productdetail_page(),
+      home: Splashpage(),
     );
   }
 }

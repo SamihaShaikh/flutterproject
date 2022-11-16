@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:timekeepers/views/dashboard/categorypage.dart';
+import 'package:timekeepers/views/category/categorypage.dart';
 import 'package:timekeepers/views/dashboard/signuppage.dart';
 
 class Loginpage extends StatelessWidget {
-  const Loginpage({Key? key}) : super(key: key);
+   Loginpage({Key? key}) : super(key: key);
 
+  static const routeName = '/LoginPage';
+  final _formkey=GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     print("Login");
@@ -37,12 +39,22 @@ class Loginpage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.only(right: 25, left: 25),
                   child: Column(
+                    key: _formkey,
                     children: [
                       Material(
                         borderRadius: BorderRadius.circular(50),
                         elevation: 5,
                         shadowColor: Colors.amber,
-                        child: TextField(
+                        child: TextFormField(
+                          validator: (value){
+                            if(value!.isEmpty ||  !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          .hasMatch(value)){
+                               return 'Enter Valid email';
+                            }
+                            else{
+                              return null;
+                            }
+                          },
                           decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.email,
@@ -62,7 +74,13 @@ class Loginpage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                         elevation: 5,
                         shadowColor: Colors.amber,
-                        child: TextField(
+                        child: TextFormField(
+                          validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Enter a valid password!';
+                  }
+                  return null;
+                },
                           decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.lock,

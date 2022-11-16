@@ -6,6 +6,7 @@ import 'package:timekeepers/views/dashboard/loginpage.dart';
 
 class Signuppage extends StatelessWidget {
   const Signuppage({Key? key}) : super(key: key);
+  static const routeName = '/SignUpPage';
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,13 @@ class Signuppage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       elevation: 5,
                       shadowColor: Colors.amber.withOpacity(0.8),
-                      child: TextField(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.person,
@@ -77,7 +84,16 @@ class Signuppage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       elevation: 5,
                       shadowColor: Colors.amber.withOpacity(0.8),
-                      child: TextField(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value!.isEmpty ||
+                              !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                  .hasMatch(value)) {
+                            return 'Enter Valid email';
+                          } else {
+                            return null;
+                          }
+                        },
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.email,
@@ -98,7 +114,13 @@ class Signuppage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       elevation: 5,
                       shadowColor: Colors.amber.withOpacity(0.8),
-                      child: TextField(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.phone_android,
@@ -118,7 +140,13 @@ class Signuppage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       elevation: 5,
                       shadowColor: Colors.amber.withOpacity(0.8),
-                      child: TextField(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.lock,
@@ -138,7 +166,13 @@ class Signuppage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       elevation: 5,
                       shadowColor: Colors.amber.withOpacity(0.8),
-                      child: TextField(
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.lock,
