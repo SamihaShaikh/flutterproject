@@ -106,12 +106,15 @@ class Loginpage extends StatelessWidget {
                       minWidth: double.infinity,
                       height: 55,
                       onPressed: () {
-                        Navigator.push(
+                        if(_formkey.currentState!.validate()){
+                   Navigator.push(
                             context,
                             MaterialPageRoute(
                                 // builder: (context) => Productgridpage()));
 
                                 builder: (context) => CategoryPage()));
+                        }
+                        
                       },
                       // color: Colors.amber,
                       color: Theme.of(context).colorScheme.primary,
@@ -121,6 +124,7 @@ class Loginpage extends StatelessWidget {
                       ),
                       child: const Text(
                         "Login",
+                        
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 25,
@@ -147,10 +151,15 @@ class Loginpage extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        Navigator.push(
+                          if(_formkey.currentState!.validate()){
+                   Navigator.push(
                             context,
                             MaterialPageRoute(
+                                // builder: (context) => Productgridpage()));
+
                                 builder: (context) => Signuppage()));
+                        }
+                        
                       },
                     )
                   ],

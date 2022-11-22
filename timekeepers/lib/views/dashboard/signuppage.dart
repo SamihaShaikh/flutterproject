@@ -5,8 +5,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:timekeepers/views/dashboard/loginpage.dart';
 
 class Signuppage extends StatelessWidget {
-  const Signuppage({Key? key}) : super(key: key);
+   Signuppage({Key? key}) : super(key: key);
   static const routeName = '/SignUpPage';
+  final _formkey=GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -204,8 +205,17 @@ class Signuppage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Loginpage()));
+
+                        if(_formkey.currentState!.validate()){
+                   Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                // builder: (context) => Productgridpage()));
+
+                                builder: (context) => Signuppage()));
+                        }
+
+                     
                     },
                     color: Colors.amber,
                     shape: RoundedRectangleBorder(
